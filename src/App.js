@@ -11,7 +11,7 @@ function App() {
   // https://metamask.io
   async function requestAccount(){
     console.log('requesting account...');
-    // ❌ Check if Meta Mask Extension exists 
+    //Check if Meta Mask Extension exists 
     if(window.ethereum){
       console.log('detected');
       try {
@@ -33,7 +33,7 @@ function App() {
     if(typeof window.ethereum !== 'undefined'){ //kiem tra metamask cos ton taij hay ko 
       await requestAccount();
 
-      // const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
 
     }
   }
